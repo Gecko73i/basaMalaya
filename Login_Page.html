@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login_Page.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <img src="Logo/BASA MALAYA Logo 2.png" width="320" height="169">
+        <h1>Login</h1>
+        <form>
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button id="loginButton">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+        
+            const enteredUsername = document.getElementById("username").value;
+            const enteredPassword = document.getElementById("password").value;
+
+            if (enteredUsername === "student1" && enteredPassword === "1234") {
+                window.location.href = "Basa_Malaya.html"; // Replace with your student page HTML file
+            }
+          
+            else if (enteredUsername === "admin" && enteredPassword === "admin") {
+                window.location.href = "admin_page.html"; // Replace with your admin page HTML file
+            }
+            else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
